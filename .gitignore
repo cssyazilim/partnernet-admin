@@ -3,3 +3,10 @@ vendor/
 .env
 dist/
 build/
+node_modules/
+vendor/
+.env
+.env.*
+dist/
+build/
+*.log
