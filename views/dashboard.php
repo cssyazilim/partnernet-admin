@@ -246,7 +246,7 @@ function activityDotColor($type)
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
-                        <p class="text-sm font-medium text-gray-900">Teklif Talep Et</p>
+                        <p class="text-sm font-medium text-gray-900">Tekliflerim</p>
                     </a>
 
                     <a href="<?= h(url_base('index.php?p=orders')) ?>"
