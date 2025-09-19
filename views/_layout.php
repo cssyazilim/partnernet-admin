@@ -167,6 +167,13 @@ function nav_classes(string $id, string $current): string
                     <span class="ml-auto bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full">A+</span>
                 </a>
 
+                  <a href="<?= h(url_base('index.php?p=addproduct')) ?>" class="<?= h(nav_classes('addproduct', $current)) ?>">
+                    <i class="fas fa-plus-circle w-5 h-5 mr-3" aria-hidden="true"></i>
+                    <span>Ürün Ekle</span>
+                    <span class="ml-auto bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full notification-badge">5</span>
+                  </a>
+
+
                 <a href="<?= h(url_base('index.php?p=messages')) ?>" class="<?= h(nav_classes('messages', $current)) ?>">
                     <i class="fas fa-envelope w-5 h-5 mr-3"></i>
                     <span>Mesajlar</span>
@@ -186,12 +193,7 @@ function nav_classes(string $id, string $current): string
                     <span>Ayarlar</span>
                 </a>
 
-                <?php if ($canAdmin): ?>
-                    <a href="<?= h(url_base('index.php?p=system')) ?>" class="<?= h(nav_classes('system', $current)) ?>">
-                        <i class="fas fa-sliders-h w-5 h-5 mr-3"></i>
-                        <span>Sistem</span>
-                    </a>
-                <?php endif; ?>
+               
 
                 <a href="<?= h(url_base('logout.php')) ?>" class="menu-item flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-red-50 hover:text-red-600 transition-colors">
                     <i class="fas fa-sign-out-alt w-5 h-5 mr-3"></i>
@@ -311,8 +313,7 @@ function nav_classes(string $id, string $current): string
     <!-- Main Content -->
     <div class="main-content">
         <div class="p-4 md:p-6">
-            <!-- Başlık -->
-
+          
 
             <!-- Route içeriği (View) -->
             <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
