@@ -312,10 +312,7 @@ function nav_classes(string $id, string $current): string
     <div class="main-content">
         <div class="p-4 md:p-6">
             <!-- Başlık -->
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold text-gray-800"><?= h($pageLabel) ?></h2>
-                <p class="text-gray-600">Hoş geldiniz.</p>
-            </div>
+
 
             <!-- Route içeriği (View) -->
             <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
