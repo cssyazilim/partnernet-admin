@@ -13,6 +13,7 @@ $labels = [
     'customers'     => 'Müşterilerim',
     'quotes'        => 'Tekliflerim',
     'orders'        => 'Siparişlerim',
+    'products'     => 'Ürünlerim',
     'invoices'      => 'Faturalar / Raporlar',
     'performance'   => 'Bayi Performans',
     'messages'      => 'Mesajlar',
@@ -153,6 +154,12 @@ function nav_classes(string $id, string $current): string
                 <a href="<?= h(url_base('index.php?p=orders')) ?>" class="<?= h(nav_classes('orders', $current)) ?>">
                     <i class="fas fa-shopping-cart w-5 h-5 mr-3"></i>
                     <span>Siparişlerim</span>
+                    <span class="ml-auto bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full">7</span>
+                </a>
+
+                <a href="<?= h(url_base('index.php?p=products')) ?>" class="<?= h(nav_classes('products', $current)) ?>">
+                    <i class="fas fa-shopping-cart w-5 h-5 mr-3"></i>
+                    <span>Ürunlerim</span>
                     <span class="ml-auto bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full">7</span>
                 </a>
 

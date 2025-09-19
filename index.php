@@ -11,6 +11,7 @@ $routes = [
     'quotes'    => ['file' => __DIR__ . '/views/quotes.php',    'roles' => ['admin', 'super_admin', 'merkez', 'partner']],
     'orders'    => ['file' => __DIR__ . '/views/orders.php',    'roles' => ['admin', 'super_admin', 'merkez', 'partner']],
     'customers' => ['file' => __DIR__ . '/views/customers.php', 'roles' => ['admin', 'super_admin', 'merkez', 'partner']],
+    'products' => ['file' => __DIR__ . '/views/products.php',  'roles' => ['admin', 'super_admin', 'merkez', 'partner']],
     'system'    => ['file' => __DIR__ . '/views/system.php',    'roles' => ['admin', 'super_admin', 'merkez']],
     'notifications'    => ['file' => __DIR__ . '/views/notifications.php',    'roles' => ['admin', 'super_admin', 'merkez']],
 ];

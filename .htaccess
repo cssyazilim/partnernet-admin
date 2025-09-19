@@ -1,17 +1,21 @@
 RewriteEngine On
 RewriteBase /partnernet-admin/
 
-# Gerçek dosya/klasör varsa dokunma (css/js/img/php)
+# 1) /api → Node backend proxy
+RewriteRule ^api/(.*)$ http://34.44.194.247:3001/api/$1 [P,L]
+
+# (Opsiyonel ama faydalı) CORS
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Headers "Authorization, Content-Type, X-Requested-With"
+Header always set Access-Control-Allow-Methods "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+
+# 2) Var olan dosya/klasörü elleme
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# /partnernet-admin → index.php?p=dashboard
+# 3) Routing kuralların
 RewriteRule ^$ index.php?p=dashboard [QSA,L]
-
-# login ve mfa gerçek dosya: doğrudan aç
 RewriteRule ^login/?$ login.php [QSA,L]
 RewriteRule ^mfa/?$   mfa.php   [QSA,L]
-
-# /partnernet-admin/sayfa → index.php?p=sayfa
 RewriteRule ^([^/]+)/?$ index.php?p=$1 [QSA,L]
